@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin_16">
+
+    <RelativeLayout
+        android:id="@+id/cardView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="@dimen/size_110"
+            android:layout_height="@dimen/margin_160"
+            android:foreground="@drawable/bg_ripple"
+            app:cardCornerRadius="@dimen/radius_8"
+            app:cardElevation="@dimen/elevation_3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imgPoster"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/grey"
+                android:contentDescription="@string/des_poster"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/movTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:textColor="@color/colorText"
+        android:textSize="@dimen/font_18"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cardView"
+        app:layout_constraintTop_toTopOf="@+id/cardView"
+        tools:text="@string/movie" />
+
+    <TextView
+        android:id="@+id/movRelease"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_8"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/cardView"
+        app:layout_constraintTop_toBottomOf="@+id/movTitle"
+        tools:text="2000" />
+
+    <TextView
+        android:id="@+id/movPopularity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_8"
+        android:background="@drawable/bg_chip"
+        android:paddingStart="@dimen/padding_8"
+        android:paddingTop="2dp"
+        android:paddingEnd="@dimen/padding_8"
+        android:paddingBottom="@dimen/padding_4"
+        android:textColor="@color/amber_600"
+        app:layout_constraintStart_toEndOf="@+id/cardView"
+        app:layout_constraintTop_toBottomOf="@+id/movRelease"
+        tools:text="222.111 Viewers" />
+
+    <TextView
+        android:id="@+id/movRating"
+        android:layout_width="@dimen/size_38"
+        android:layout_height="@dimen/size_38"
+        android:layout_marginStart="88dp"
+        android:layout_marginBottom="@dimen/margin_8"
+        android:background="@drawable/bg_rounded"
+        android:drawablePadding="@dimen/margin_8"
+        android:gravity="center"
+        android:maxEms="5"
+        android:maxLines="1"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/cardView"
+        tools:text="8.2" />
+</androidx.constraintlayout.widget.ConstraintLayout>
